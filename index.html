@@ -7,14 +7,51 @@
     <title>adaquiz</title>
   </head>
   <body>
-    <div>
-      <h1 id="mainTitle" class="startingpoint"> What ?</h1>
-    </div>
-    <div>
-      <a href="quizz.html">
-        <startButton" class= "pressingButton"> Start the quizz !</button>
-      </a>
-    </div>
+    <header>
+      <p id= "quizzHeader"></p>
+    </header>
+
+    <div class = "beforeQuizz"> <!-- start of beforeQuizz part -->
+      <div>
+        <h1 id="mainTitle" class="startingpoint"> What ?</h1>
+      </div>
+      <div>
+        <button id = "startButton"> Start the quizz !</button>
+      </div>
+    </div> <!-- end of beforeQuizz part -->
+
+    <div class = "duringQuizz hidden"> <!-- start of duringQuizz part -->
+      <div class = "questionQuizz">
+        <h1 id = "question"></h1> 
+      </div>
+      <div id = "gridButtonsId" class= "gridButtonsId">
+          <button id = "button0" class="buttonQuizz"></button>
+          <button id = "button1" class="buttonQuizz"></button>
+          <button id = "button2" class="buttonQuizz"></button>
+          <button id = "button3" class="buttonQuizz"></button>
+      </div>
+      <div class= "resultQuizz">
+        <p id = "result"></p>    
+      </div>
+      <div id = "nextQ" class= "nextQQuizz">
+          <button id = "nextButton" class="nextButtonQuizz"> Question suivante </button>
+      </div> 
+    </div> <!-- end of duringQuizz part -->
+
+    <div class = "afterQuizz hidden"> <!-- start of afterQuizz part -->
+      <div class = "endTitle">
+        <h1 id= "resultTitle"></h1>
+      </div>
+      <div class = "result">
+        <h2 id= "endScore"></h2>
+      </div>
+      <div class = "nbRightAnswer">
+        <p id="nbFinal"></p>
+      </div>
+      <div class="restart">
+        <button id="restartButton">Recommencer</button>
+      </div>      
+    </div> <!-- end of afterQuizz part -->
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
