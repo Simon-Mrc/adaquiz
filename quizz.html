@@ -7,20 +7,26 @@
     <title>adaquiz</title>
   </head>
   <body>
-    <div class = "questionQuizz">
-      <h1 id = "question"></h1> 
+    <div class = "duringQuizz">
+      <div class = "questionQuizz">
+        <h1 id = "question"></h1> 
+      </div>
+      <div id = "gridButtonsId" class= "gridButtonsId">
+          <button id = "button0" class="buttonQuizz"></button>
+          <button id = "button1" class="buttonQuizz"></button>
+          <button id = "button2" class="buttonQuizz"></button>
+          <button id = "button3" class="buttonQuizz"></button>
+      </div>
+      <div class= "resultQuizz">
+        <p id = "result"></p>
+    
+      </div>
+      <div id = "nextQ" class= "nextQQuizz">
+          <button id = "nextButton" class="nextButtonQuizz"> Question suivante </button>
+      </div> 
     </div>
-    <div id = "gridButtonsId" class= "gridButtonsId">
-        <button id = "button0" class="buttonQuizz"></button>
-        <button id = "button1" class="buttonQuizz"></button>
-        <button id = "button2" class="buttonQuizz"></button>
-        <button id = "button3" class="buttonQuizz"></button>
-    </div>
-    <div id = "result" class= "resultQuizz">
-
-    </div>
-    <div id = "nextQ" class= "nextQQuizz">
-        <button id = "nextButton" class="nextButtonQuizz"> Question suivante </button>
+    <div class = "afterQuizz">
+      
     </div>
     <script type="module" src="/src/quizz.js"></script>
   </body>

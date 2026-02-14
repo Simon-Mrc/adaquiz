@@ -1,0 +1,5 @@
+need to repare the hidden / not hidden class for my divs
+need to add some script to and div to show results and such
+need to see how local storage works
+obviously work on css to stylish all
+Reorganize to only have 1 html page instead of 2 ?
