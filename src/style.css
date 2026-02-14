@@ -74,6 +74,18 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+.koaka {
+  color: #646cff;
+  font-size: 20px;
+  font-weight: 190;
+}
+
+.koaka2 {
+  font-size: 50px;
+  font-weight: 500;
+  font-family: inherit;
+  color: #1a1a1a;
+}
 button:hover {
   border-color: #646cff;
 }
