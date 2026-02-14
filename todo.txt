@@ -1,0 +1,3 @@
+all css need to be done
+need to clean html code maybe contains to many useless div 
+still need to investigate local storage functions
