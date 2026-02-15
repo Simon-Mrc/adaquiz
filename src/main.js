@@ -15,7 +15,6 @@ for(let i = 0 ; i < startButton.length ; i=i+1){
         initiate();
     });
 }
-console.log(startButton);
 
 document.querySelector("#quizzHeaderBar").classList.add(`disapear`);
 

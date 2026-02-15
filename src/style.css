@@ -61,6 +61,7 @@ header {
 .result{
   text-align: center;
 }
+
 /* for smooth transition tries xD */
 .beforeQuizz, .duringQuizz, .afterQuizz{
   overflow: hidden;
@@ -80,6 +81,10 @@ h3 {
   font-size: 1.5em;
   line-height: 1.1;
   text-align: center;
+}
+.restart{
+  display: flex;
+  justify-content: space-between;
 }
 /* Global style for user interactions */
 a {

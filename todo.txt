@@ -1,3 +1,10 @@
-css still need to be worked on
-need to clean html code maybe contains to many useless div 
-still need to investigate local storage functions
+Mandatory :
+-  Work on css for style
+-  Clean code and delete useless sht (#1 prio)
+
+optionnal : 
+-  Investigate local storage
+-  Modify js so it can auto adapt with number of question and number of answer (<form> usage ?)
+-  Investigate traduction 
+-  Incorporate dark mode 
+-  Work on animations
