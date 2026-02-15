@@ -8,10 +8,11 @@ let quiz ;
 document.querySelector("#mainTitle1").textContent = quiz1.title;
 document.querySelector("#mainTitle2").textContent = quiz2.title;
 document.querySelector("#mainTitle3").textContent = quiz3.title;
+let quizzArray = [quiz1,quiz2,quiz3];
 let startButton = document.querySelectorAll(".startButton");
 for(let i = 0 ; i < startButton.length ; i=i+1){
     startButton[i].addEventListener("click",function(){
-        quiz = eval(`quiz${i + 1}`); // `` is for interpretation as a string eval() is for running string as code
+        quiz = quizzArray[i];
         initiate();
     });
 }
