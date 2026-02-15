@@ -1,0 +1,40 @@
+{
+    "title": "Wealthiest Women in History",
+    "questions": [
+        {
+            "question": "Who is considered the wealthiest woman in history?",
+            "options": ["Cleopatra VII", "Nur Jahan", "Mansa Musa's wife", "Catherine the Great"],
+            "correctIndex": 1
+        },
+        {
+            "question": "In which empire did Nur Jahan hold significant power and wealth?",
+            "options": ["Ottoman Empire", "Mughal Empire", "Persian Empire", "Byzantine Empire"],
+            "correctIndex": 1
+        },
+        {
+            "question": "What was Cleopatra VII's primary source of wealth?",
+            "options": ["Gold mining", "Control of Egyptian agricultural output and taxes", "Silk trade", "Military conquests"],
+            "correctIndex": 1
+        },
+        {
+            "question": "Which wealthy woman ruled Britain as Prime Minister and was known as the 'Iron Lady'?",
+            "options": ["Queen Victoria", "Elizabeth I", "Margaret Thatcher", "Eleanor of Aquitaine"],
+            "correctIndex": 2
+        },
+        {
+            "question": "How much wealth did the Mali Empire control during Mansa Musa's reign (approximately in today's currency)?",
+            "options": ["Approximately $50 billion", "Approximately $100 billion", "Approximately $400+ billion", "Approximately $1 trillion"],
+            "correctIndex": 2
+        },
+        {
+            "question": "What is Mackenzie Scott primarily known for regarding her wealth?",
+            "options": ["Self-made billionaire from tech", "Inheritance from Amazon co-founder", "Entertainment industry success", "Real estate empire"],
+            "correctIndex": 1
+        },
+        {
+            "question": "Who is the richest self-made female billionaire in modern times?",
+            "options": ["Oprah Winfrey", "Rihanna", "Kylie Jenner", "Sara Blakely"],
+            "correctIndex": 0
+        }
+    ]
+}

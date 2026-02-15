@@ -1,0 +1,65 @@
+{
+    "title": "Women Athletes Throughout History",
+    "questions": [
+        {
+            "question": "Which tennis player won 24 Grand Slam singles titles?",
+            "options": ["Serena Williams", "Venus Williams", "Steffi Graf", "Margaret Court"],
+            "correctIndex": 0
+        },
+        {
+            "question": "In which sport did Simone Biles become an Olympic champion?",
+            "options": ["Swimming", "Track and Field", "Gymnastics", "Volleyball"],
+            "correctIndex": 2
+        },
+        {
+            "question": "Who is considered the greatest female soccer player of all time?",
+            "options": ["Mia Hamm", "Marta", "Megan Rapinoe", "Alex Morgan"],
+            "correctIndex": 0
+        },
+        {
+            "question": "How many Olympic gold medals did swimmer Katie Ledecky win at the 2016 Rio Olympics?",
+            "options": ["2 medals", "3 medals", "4 medals", "5 medals"],
+            "correctIndex": 2
+        },
+        {
+            "question": "Which tennis player won the Golden Slam in 1988?",
+            "options": ["Steffi Graf", "Martina Navratilova", "Chris Evert", "Billie Jean King"],
+            "correctIndex": 0
+        },
+        {
+            "question": "In which sport did Serena Williams' sister Venus also become a champion?",
+            "options": ["Track and Field", "Basketball", "Tennis", "Golf"],
+            "correctIndex": 2
+        },
+        {
+            "question": "Who won the most Olympic medals for a female gymnast?",
+            "options": ["Simone Biles", "Nadia Comaneci", "Shannon Miller", "Svetlana Khorkina"],
+            "correctIndex": 0
+        },
+        {
+            "question": "Which country did Mia Hamm play for as a soccer player?",
+            "options": ["Canada", "United States", "Germany", "Norway"],
+            "correctIndex": 1
+        },
+        {
+            "question": "How many times did Serena Williams win the Australian Open?",
+            "options": ["5 times", "7 times", "9 times", "11 times"],
+            "correctIndex": 2
+        },
+        {
+            "question": "In which sport did Billie Jean King dominate during the 1960s and 1970s?",
+            "options": ["Golf", "Tennis", "Badminton", "Squash"],
+            "correctIndex": 1
+        },
+        {
+            "question": "Which Alpine skier won the most Olympic medals for skiing?",
+            "options": ["Lindsey Vonn", "Annemarie Moser-Pröll", "Anja Pärson", "Katja Seizinger"],
+            "correctIndex": 0
+        },
+        {
+            "question": "Who is the first female athlete to win an Olympic medal in skateboarding?",
+            "options": ["Nyjah Huston", "Sky Brown", "Leticia Bufoni", "Jaws Hornblower"],
+            "correctIndex": 1
+        }
+    ]
+}

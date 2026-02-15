@@ -1,12 +1,23 @@
 import "./style.css";
-import quiz from "./quiz-femmes-scientifiques.json";
+import quiz1 from "./quiz-femmes-scientifiques.json";
+import quiz2 from "./quiz-wealthy-women.json";
+import quiz3 from "./quiz-athlets-women.json";
+let quiz ;
 
 // js for part before quizz started
-document.querySelector("#mainTitle").textContent = quiz.title;
-let startButton = document.querySelector("#startButton");
-startButton.addEventListener("click",initiate);
-document.querySelector("#quizzHeader").textContent = quiz.title;
-document.querySelector("#quizzHeader").classList.add(`hidden`);
+document.querySelector("#mainTitle1").textContent = quiz1.title;
+document.querySelector("#mainTitle2").textContent = quiz2.title;
+document.querySelector("#mainTitle3").textContent = quiz3.title;
+let startButton = document.querySelectorAll(".startButton");
+for(let i = 0 ; i < startButton.length ; i=i+1){
+    startButton[i].addEventListener("click",function(){
+        quiz = eval(`quiz${i + 1}`); // `` is for interpretation as a string eval() is for running string as code
+        initiate();
+    });
+}
+console.log(startButton);
+
+document.querySelector("#quizzHeaderBar").classList.add(`disapear`);
 
 // js for starting the quizz here
 let step = 0;  // What part of the quizz you are in
@@ -30,8 +41,16 @@ nextButton.addEventListener("click", nextQuestion);
 let restartButton = document.querySelector("#restartButton");
 restartButton.addEventListener("click", restart);
 
+// Creation of main page button
+let mainPageButton = document.querySelector("#mainPageButton");
+mainPageButton.addEventListener("click", mainPage);
+
+let backToMain = document.querySelector(`#backToMain`);
+backToMain.addEventListener(`click`, mainPage);
+
 // Function to initiate the quizz
 function initiate(){
+    document.querySelector("#quizzHeader").textContent = quiz.title;
     step = 0 ;
     rep = 0 ;
     nbRights = 0;
@@ -49,7 +68,7 @@ function initiate(){
     document.querySelector(".beforeQuizz").classList.add(`hidden`);
     document.querySelector(".duringQuizz").classList.remove(`hidden`);
     document.querySelector("#nextButton").classList.add(`ghost`);
-    document.querySelector("#quizzHeader").classList.remove(`hidden`);
+    document.querySelector("#quizzHeaderBar").classList.remove(`disapear`);
 };
 
 // check if rep choosen by the button match the current quizz step
@@ -109,7 +128,7 @@ function endOfQuizz(){
     document.querySelector("#endScore").textContent = `Ton score est de `;
     document.querySelector("#nbFinal").textContent = nbRights + `/` + quiz.questions.length;
     document.querySelector(".afterQuizz").classList.remove(`hidden`);
-    document.querySelector("#quizzHeader").classList.add(`hidden`);
+    document.querySelector("#quizzHeaderBar").classList.add(`disapear`);
 };
 
 // Remove hidden from beforeQuizz to prevent failure from initiate function
@@ -118,3 +137,10 @@ function restart(){
     document.querySelector(".beforeQuizz").classList.remove(`hidden`);
     initiate();
 };
+
+function mainPage(){
+    document.querySelector("#quizzHeaderBar").classList.add(`disapear`);
+    document.querySelector(".duringQuizz").classList.add(`hidden`);
+    document.querySelector(".afterQuizz").classList.add(`hidden`);
+    document.querySelector(".beforeQuizz").classList.remove(`hidden`);
+}

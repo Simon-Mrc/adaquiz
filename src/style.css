@@ -2,6 +2,7 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 14px;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -12,15 +13,75 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.hidden {
-  display: none;
+/* global content structure */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  flex-wrap: wrap;
+  padding: 5%;
+  padding-top: 0%;
+  max-width: 1200px;  
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0%;
+  min-height: 100vh;
 }
 
-.ghost {
-  visibility: hidden;
+header {
+  line-height: auto;
+  padding: 0%;
+  display: flex;
+  width: 100%;
+  align-self: center;
+  height:min-content;
+  justify-content: space-between;
+  gap : 1rem;
+}
+#quizzHeader{
+  font-family:Brush Script MT, Brush Script Std, cursive ;
+  font-size:2em;
+}
+#backToMain{
+  margin: auto;
+  margin-right: 5%;
+}
+.beforeQuizz{
+  align-items: center;
+  text-align: center; 
+}
+.gridButtonsClass{
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+  place-items: center;
+}
+.result{
+  text-align: center;
+}
+/* for smooth transition tries xD */
+.beforeQuizz, .duringQuizz, .afterQuizz{
+  overflow: hidden;
+  max-height: 800px;
+  transition: max-height 0.3s ease;
 }
 
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  text-align: center;
+}
+/* Global style for user interactions */
 a {
   font-weight: 500;
   color: #646cff;
@@ -29,28 +90,6 @@ a {
 a:hover {
   color: #535bf2;
 }
-
-body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -81,19 +120,31 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-.result{
-  text-align: center;
+  transition: all 0.3s ease;
 }
 button:hover {
   border-color: #646cff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Created for js functions and navigations through the quizz */
+.hidden {
+  max-height: 0px;
+}
+.ghost {
+  visibility: hidden;
+  transition: none;
+}
+.disapear{
+  display: none;
+}
+
+/* here is for specific preference of users */
+/* need some investigation for working in js to make it more user friendly */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -103,6 +154,30 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #e3d4d4;
+  }
+}
+
+/* Tablet size little adjustments */
+@media (min-width: 768px) {
+  :root{
+    font-size: 16px;
+  }
+  header {
+    padding: 0%;
+    text-align: left;
+    align-self: flex-start;
+  }
+}
+
+/* Desktop little adjustments */
+@media (min-width: 1024px) {
+  :root{
+    font-size: 18px;
+  }
+  header {
+    padding: 0%;
+    text-align: left;
+    align-self: flex-start;
   }
 }
