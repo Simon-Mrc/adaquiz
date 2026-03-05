@@ -180,3 +180,122 @@ button:disabled {
     align-self: flex-start;
   }
 }
+
+/* === WIKI CARD OVERLAY === */
+
+/* Backdrop behind the card */
+.wiki-card-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+  z-index: 999;
+}
+
+/* The card itself — always centered on screen */
+.wiki-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+
+  width: 90%;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 2px solid #1a73e8;
+  box-shadow:
+    0 0 0 4px rgba(26, 115, 232, 0.15),
+    0 8px 32px rgba(26, 115, 232, 0.18),
+    0 2px 8px rgba(0, 0, 0, 0.12);
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Scrollbar styling (modern, blue-tinted) */
+.wiki-card::-webkit-scrollbar {
+  width: 6px;
+}
+.wiki-card::-webkit-scrollbar-track {
+  background: #f0f4ff;
+  border-radius: 8px;
+}
+.wiki-card::-webkit-scrollbar-thumb {
+  background: #1a73e8;
+  border-radius: 8px;
+}
+
+/* Close button — top-right corner of the card */
+.wiki-card-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  color: #5f6368;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.wiki-card-close:hover {
+  background: #f0f4ff;
+  color: #1a73e8;
+}
+
+/* Title */
+.wiki-card h1 {
+  color: #202122;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  border-bottom: 2px solid #1a73e8;
+  padding-bottom: 10px;
+  padding-right: 36px; /* room for the close button */
+}
+
+/* Image — top right, small */
+.wiki-card img {
+  float: right;
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 0 14px 20px;
+  border: 2px solid #e0eaff;
+  box-shadow: 0 2px 8px rgba(26, 115, 232, 0.13);
+}
+
+/* Clear float after content */
+.wiki-card::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* Paragraph */
+.wiki-card p {
+  line-height: 1.7;
+  color: #202122;
+  font-size: 1.05em;
+  margin-top: 0;
+}
+
+/* Link */
+.wiki-card a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 600;
+}
+.wiki-card a:hover {
+  text-decoration: underline;
+}

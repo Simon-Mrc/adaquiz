@@ -8,3 +8,8 @@ optionnal :
 -  Investigate traduction 
 -  Incorporate dark mode 
 -  Work on animations
+
+How to rebuild cleaner for next time :
+-  Create function to hide and show div depending on need
+-  Create array variables that contains all the DOM elements needed
+-  Create function to add class to all element of node from document.querySelectorAll

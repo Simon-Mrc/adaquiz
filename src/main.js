@@ -2,6 +2,7 @@ import "./style.css";
 import quiz1 from "./quiz-femmes-scientifiques.json";
 import quiz2 from "./quiz-wealthy-women.json";
 import quiz3 from "./quiz-athlets-women.json";
+import { wikiBtn } from "./wikifunction";
 let quiz ;
 
 // js for part before quizz started
@@ -72,23 +73,44 @@ function initiate(){
 };
 
 // check if rep choosen by the button match the current quizz step
-function checkAnswer(){
-    if(rep == quiz.questions[step].correctIndex){
+async function checkAnswer(){
+    step = step + 1;
+    if(rep == quiz.questions[step-1].correctIndex){
         document.querySelector("#result").textContent = "yeah right answer";
         nbRights = nbRights + 1;
     }
     else{
-        document.querySelector("#result").textContent = `Wrong answer, correct answer was ${quiz.questions[step].options[quiz.questions[step].correctIndex]}`;
+        document.querySelector("#result").textContent = `Wrong answer, correct answer was ${quiz.questions[step-1].options[quiz.questions[step-1].correctIndex]}`;
     }
     for (let i = 0; i < answerButton.length; i = i+1) {
         answerButton[i].disabled = true;
         };
-    document.querySelector("#nextButton").classList.remove(`ghost`);  
-    step = step + 1;
+        let research = quiz.questions[step-1].options[quiz.questions[step-1].correctIndex];
+        console.log(research);
+        try{
+            let hmtlContent = await fetch( `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(research)}`)
+        const data = await hmtlContent.json();
+        console.log(data.status!=404);
+        if(data.status!=404){
+            document.querySelector("#nextButton").classList.remove(`ghost`);  
+            console.log('test');
+            await wikiBtn(research);
+        }else{
+            document.querySelector("#nextButton").classList.remove(`ghost`);  
+        }
+    }catch{
+        document.querySelector("#nextButton").classList.remove(`ghost`);  
+    }
 };
 
 // function to trigger the next question. Change the value of all stuff
 function nextQuestion(){
+    try{
+        let checkBtn = document.getElementById("toBeRemoved");
+        checkBtn.remove();
+    }catch(error){
+        console.log('there is no button to remove')
+    }
     if (step == quiz.questions.length){
         endOfQuizz();
         return;
